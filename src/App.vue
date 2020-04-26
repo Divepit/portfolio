@@ -1,32 +1,47 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app id="app">
+    <!--    <v-navigation-drawer width="200" app>-->
+    <!--      <v-list>-->
+    <!--        <v-list-item-group>-->
+    <!--          <v-list-item>-->
+    <!--            Hello-->
+    <!--          </v-list-item>-->
+    <!--        </v-list-item-group>-->
+    <!--      </v-list>-->
+    <!--    </v-navigation-drawer>-->
+    <v-app-bar app class="mx-auto" color="white" dark flat width="1200">
+      <v-toolbar-title class="grey--text font-weight-black muli">Marco Trentini</v-toolbar-title>
+      <v-spacer/>
+      <v-btn color="grey" text>Blog</v-btn>
+      <v-btn color="grey" text>Projects</v-btn>
+      <v-btn class="py-0" color="primary" elevation="0">Contact</v-btn>
+    </v-app-bar>
+    <v-content>
+      <v-container>
+        <v-card class="mx-auto" flat outlined width="1200">
+          <v-card-title class="font-weight-light muli">Hello, I'm Marco</v-card-title>
+        </v-card>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
+<script>
+  export default {
+    name: 'App',
 
+    components: {},
+
+    data: () => ({
+      //
+    })
+  }
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  .opensans {
+    font-family: "Open Sans";
+  }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .muli {
+    font-family: "Muli" !important;
+  }
 </style>
