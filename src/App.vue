@@ -1,43 +1,45 @@
 <template>
   <v-app id="app">
-    <!--    <v-navigation-drawer width="200" app>-->
-    <!--      <v-list>-->
-    <!--        <v-list-item-group>-->
-    <!--          <v-list-item>-->
-    <!--            Hello-->
-    <!--          </v-list-item>-->
-    <!--        </v-list-item-group>-->
-    <!--      </v-list>-->
-    <!--    </v-navigation-drawer>-->
-    <v-app-bar app class="mx-auto" color="white" dark flat width="1200">
-      <v-toolbar-title class="grey--text font-weight-black muli">Marco Trentini</v-toolbar-title>
-      <v-spacer/>
-      <v-btn color="grey" text>Blog</v-btn>
-      <v-btn color="grey" text>Projects</v-btn>
-      <v-btn class="py-0" color="primary" elevation="0">Contact</v-btn>
-    </v-app-bar>
-    <v-content>
-      <v-container>
-        <v-card class="mx-auto" flat outlined width="1200">
-          <v-card-title class="font-weight-light muli">Hello, I'm Marco</v-card-title>
-        </v-card>
-      </v-container>
+    <Toolbar/>
+    <v-content class="pt-0">
+      <router-view/>
     </v-content>
+    <v-footer class="lighten-3 grey--text opensans" color="grey" elevation="1">
+      <v-container>
+        <v-row justify="center">
+          <v-col cols="3">
+            <span class="font-weight-black" style="font-size: 1.5rem">Hi, I'm Marco</span><br>
+            I'm a Web Developer from Zurich. <br>
+            Do you have a project or idea you'd like to talk about? Let me know! <br>
+            <a href="mailto:hello@thedivepit.com">hello@thedivepit.com</a>
+          </v-col>
+          <v-col cols="3">
+            <span class="font-weight-black" style="font-size: 1.5rem">Find me on social media!</span><br>
+            <v-btn class="grey--text text-none" style="font-size: 1rem" text>
+              <v-icon class="mr-2">mdi-github</v-icon>
+              GitHub
+            </v-btn>
+            <br>
+            <v-btn class="grey--text text-none" style="font-size: 1rem" text>
+              <v-icon class="mr-2">mdi-linkedin</v-icon>
+              LinkedIn
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-footer>
   </v-app>
 </template>
 <script>
+  import Toolbar from './components/UI/Toolbar'
+
   export default {
     name: 'App',
-
-    components: {},
-
-    data: () => ({
-      //
-    })
+    components: { Toolbar }
   }
 </script>
 <style>
-  .opensans {
+  #app {
     font-family: "Open Sans";
   }
 
