@@ -78,7 +78,6 @@
       </v-col>
     </v-row>
   </v-container>
-
 </template>
 <script>
   import { db } from '@/firebase.js'

@@ -6,9 +6,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'CurrentProjects'
-  }
+export default {
+  name: 'CurrentProjects'
+}
 </script>
 
 <style scoped>
