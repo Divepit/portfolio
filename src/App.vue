@@ -15,12 +15,13 @@
           </v-col>
           <v-col cols="3">
             <span class="font-weight-black" style="font-size: 1.5rem">Find me on social media!</span><br>
-            <v-btn class="grey--text text-none" style="font-size: 1rem" text>
+            <v-btn class="grey--text text-none" href="https://github.com/divepit" style="font-size: 1rem" text>
               <v-icon class="mr-2">mdi-github</v-icon>
               GitHub
             </v-btn>
             <br>
-            <v-btn class="grey--text text-none" style="font-size: 1rem" text>
+            <v-btn class="grey--text text-none" href="https://www.linkedin.com/in/marco-t-258240160/"
+                   style="font-size: 1rem" text>
               <v-icon class="mr-2">mdi-linkedin</v-icon>
               LinkedIn
             </v-btn>

@@ -11,7 +11,8 @@
             <v-icon>mdi-github</v-icon>
             GitHub
           </v-btn>
-          <v-btn class="text-none" color="grey" href="https://github.com/divepit" target="_blank" text>
+          <v-btn class="text-none" color="grey" href="https://www.linkedin.com/in/marco-t-258240160/" target="_blank"
+                 text>
             <v-icon>mdi-linkedin</v-icon>
             LinkedIn
           </v-btn>
