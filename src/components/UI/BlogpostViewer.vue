@@ -35,24 +35,24 @@
 </template>
 
 <script>
-  import { db } from '../../firebase'
-  import { Editor } from 'vuetify-markdown-editor'
+import { db } from '../../firebase'
+import { Editor } from 'vuetify-markdown-editor'
 
-  export default {
-    name: 'BlogpostViewer',
-    components: { Editor },
-    created () {
-      db.collection('blogposts').doc(this.$route.params.post_id).get()
-        .then(response => {
-          this.post = response.data()
-        })
-    },
-    data () {
-      return {
-        post: {}
-      }
+export default {
+  name: 'BlogpostViewer',
+  components: { Editor },
+  created () {
+    db.collection('blogposts').doc(this.$route.params.post_id).get()
+      .then(response => {
+        this.post = response.data()
+      })
+  },
+  data () {
+    return {
+      post: {}
     }
   }
+}
 </script>
 
 <style scoped>

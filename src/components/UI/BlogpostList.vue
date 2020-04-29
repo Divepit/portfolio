@@ -30,40 +30,40 @@
   </div>
 </template>
 <script>
-  import { mapState } from 'vuex'
-  import { db } from '@/firebase.js'
+import { mapState } from 'vuex'
+import { db } from '@/firebase.js'
 
-  export default {
-    name: 'BlogpostList',
-    created () {
-      this.getBlogposts()
-    },
-    computed: {
-      ...mapState(['loggedIn'])
-    },
-    data () {
-      return {
-        posts: []
-      }
-    },
-    methods: {
-      getBlogposts () {
-        this.posts = []
-        db.collection('blogposts').get()
-          .then(response => {
-            response.forEach(doc => {
-              if (this.loggedIn || doc.data().public) {
-                this.posts.push(doc.data())
-              }
-            })
+export default {
+  name: 'BlogpostList',
+  created () {
+    this.getBlogposts()
+  },
+  computed: {
+    ...mapState(['loggedIn'])
+  },
+  data () {
+    return {
+      posts: []
+    }
+  },
+  methods: {
+    getBlogposts () {
+      this.posts = []
+      db.collection('blogposts').get()
+        .then(response => {
+          response.forEach(doc => {
+            if (this.loggedIn || doc.data().public) {
+              this.posts.push(doc.data())
+            }
           })
-      },
-      deletePost (id) {
-        db.collection('blogposts').doc(id).delete()
-          .then(
-            this.getBlogposts()
-          )
-      }
+        })
+    },
+    deletePost (id) {
+      db.collection('blogposts').doc(id).delete()
+        .then(
+          this.getBlogposts()
+        )
     }
   }
+}
 </script>

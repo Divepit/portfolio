@@ -80,26 +80,26 @@
   </v-container>
 </template>
 <script>
-  import { db } from '@/firebase.js'
+import { db } from '@/firebase.js'
 
-  export default {
-    name: 'IntroductionCard',
-    created () {
-      db.collection('blogposts').get()
-        .then(response => {
-          response.forEach(doc => {
-            if (this.loggedIn || doc.data().public) {
-              this.posts.push(doc.data())
-            }
-          })
+export default {
+  name: 'IntroductionCard',
+  created () {
+    db.collection('blogposts').get()
+      .then(response => {
+        response.forEach(doc => {
+          if (this.loggedIn || doc.data().public) {
+            this.posts.push(doc.data())
+          }
         })
-    },
-    data () {
-      return {
-        posts: []
-      }
+      })
+  },
+  data () {
+    return {
+      posts: []
     }
   }
+}
 </script>
 <style>
   .muli {

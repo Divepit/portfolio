@@ -19,30 +19,30 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
-  import BlogpostList from '../components/UI/BlogpostList'
-  import BlogpostCreator from '../components/UI/BlogpostCreator'
+import { mapState } from 'vuex'
+import BlogpostList from '../components/UI/BlogpostList'
+import BlogpostCreator from '../components/UI/BlogpostCreator'
 
-  export default {
-    name: 'Blog',
-    components: {
-      BlogpostCreator,
-      BlogpostList
-    },
-    computed: {
-      ...mapState(['loggedIn'])
-    },
-    data () {
-      return {
-        addingPost: false,
-        editedPost: false
-      }
-    },
-    methods: {
-      editPost (post) {
-        this.addingPost = true
-        this.editedPost = post
-      }
+export default {
+  name: 'Blog',
+  components: {
+    BlogpostCreator,
+    BlogpostList
+  },
+  computed: {
+    ...mapState(['loggedIn'])
+  },
+  data () {
+    return {
+      addingPost: false,
+      editedPost: false
+    }
+  },
+  methods: {
+    editPost (post) {
+      this.addingPost = true
+      this.editedPost = post
     }
   }
+}
 </script>

@@ -15,39 +15,39 @@
 </template>
 
 <script>
-  import { auth } from '../../firebase'
+import { auth } from '../../firebase'
 
-  export default {
-    name: 'Signin',
-    created () {
-      if (localStorage.loggedIn) {
-        this.$router.replace('/')
-      }
-    },
-    data () {
-      return {
-        email: null,
-        password: null,
-        message: null
-      }
-    },
-    methods: {
-      signin () {
-        if (this.email && this.password) {
-          auth.signInWithEmailAndPassword(this.email, this.password)
-            .then(response => {
-              if (auth.currentUser) {
-                this.$store.state.loggedIn = true
-                localStorage.loggedIn = true
-                this.$router.replace('/')
-              } else {
-              }
-            })
-        }
+export default {
+  name: 'Signin',
+  created () {
+    if (localStorage.loggedIn) {
+      this.$router.replace('/')
+    }
+  },
+  data () {
+    return {
+      email: null,
+      password: null,
+      message: null
+    }
+  },
+  methods: {
+    signin () {
+      if (this.email && this.password) {
+        auth.signInWithEmailAndPassword(this.email, this.password)
+          .then(response => {
+            if (auth.currentUser) {
+              this.$store.state.loggedIn = true
+              localStorage.loggedIn = true
+              this.$router.replace('/')
+            } else {
+            }
+          })
       }
     }
-
   }
+
+}
 </script>
 
 <style scoped>

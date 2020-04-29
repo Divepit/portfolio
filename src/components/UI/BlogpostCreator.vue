@@ -64,65 +64,65 @@
 </template>
 
 <script>
-  import { Editor } from 'vuetify-markdown-editor'
-  import 'vuetify-markdown-editor/dist/vuetify-markdown-editor.css'
-  import { db } from '@/firebase.js'
+import { Editor } from 'vuetify-markdown-editor'
+import 'vuetify-markdown-editor/dist/vuetify-markdown-editor.css'
+import { db } from '@/firebase.js'
 
-  export default {
-    name: 'BlogpostCreator',
-    components: { Editor },
-    props: ['editedPost'],
-    created () {
-      if (this.editedPost) {
-        this.post = this.editedPost
-      } else {
-        var today = new Date()
-        this.post.date = today.toDateString() + ', ' + today.getHours() + ':' + today.getMinutes()
-      }
-    },
-    data () {
-      return {
-        post: {
-          id: null,
-          title: '',
-          content: '',
-          public: false,
-          date: ''
-        }
-      }
-    },
-    methods: {
-      makeid (length) {
-        var result = ''
-        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-        var charactersLength = characters.length
-        for (var i = 0; i < length; i++) {
-          result += characters.charAt(Math.floor(Math.random() * charactersLength))
-        }
-        return result
-      },
-      savePost () {
-        if (this.post.id === null) {
-          this.post.id = this.makeid(10)
-        }
-        db.collection('blogposts').doc(this.post.id).set(this.post)
-      },
-      publishPost () {
-        if (this.post.id === null) {
-          this.post.id = this.makeid(10)
-        }
-        this.post.public = true
-        db.collection('blogposts').doc(this.post.id).set(this.post)
-      },
-      unpublishPost () {
-        if (this.post.id === null) {
-          this.post.id = this.makeid(10)
-        }
-        this.post.public = false
-        db.collection('blogposts').doc(this.post.id).set(this.post)
+export default {
+  name: 'BlogpostCreator',
+  components: { Editor },
+  props: ['editedPost'],
+  created () {
+    if (this.editedPost) {
+      this.post = this.editedPost
+    } else {
+      var today = new Date()
+      this.post.date = today.toDateString() + ', ' + today.getHours() + ':' + today.getMinutes()
+    }
+  },
+  data () {
+    return {
+      post: {
+        id: null,
+        title: '',
+        content: '',
+        public: false,
+        date: ''
       }
     }
+  },
+  methods: {
+    makeid (length) {
+      var result = ''
+      var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+      var charactersLength = characters.length
+      for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength))
+      }
+      return result
+    },
+    savePost () {
+      if (this.post.id === null) {
+        this.post.id = this.makeid(10)
+      }
+      db.collection('blogposts').doc(this.post.id).set(this.post)
+    },
+    publishPost () {
+      if (this.post.id === null) {
+        this.post.id = this.makeid(10)
+      }
+      this.post.public = true
+      db.collection('blogposts').doc(this.post.id).set(this.post)
+    },
+    unpublishPost () {
+      if (this.post.id === null) {
+        this.post.id = this.makeid(10)
+      }
+      this.post.public = false
+      db.collection('blogposts').doc(this.post.id).set(this.post)
+    }
   }
+}
 </script>
 <style>
 </style>
