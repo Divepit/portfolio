@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <v-row class="my-12" justify="center">
-      <v-col md="7" sm="12">
+    <v-row justify="center" align="center">
+      <v-col md="5" sm="12">
         <v-card class="mx-auto lighten-1" flat>
           <v-card-title class="font-weight-black grey--text text--darken-2" style="font-size: 2rem">Hi, I'm Marco
           </v-card-title>
@@ -17,13 +17,19 @@
           </v-card-text>
         </v-card>
       </v-col>
+      <v-col md="2" sm="12" >
+        <v-img src="@/assets/undraw_code_thinking_1jeh.svg"></v-img>
+      </v-col>
     </v-row>
     <v-row justify="center">
       <v-col md="7" sm="12">
         <v-divider/>
       </v-col>
     </v-row>
-    <v-row class="mb-6" justify="center">
+    <v-row class="mb-6" align="center" justify="center">
+<!--      <v-col md="2" sm="12">-->
+<!--        <v-img src="@/assets/undraw_choice_9385.svg"></v-img>-->
+<!--      </v-col>-->
       <v-col md="7" sm="12">
         <v-card flat>
           <v-card-title class="font-weight-bold grey--text text--darken-2" style="font-size: 1.75rem">What am I working
@@ -52,7 +58,7 @@
         <v-divider/>
       </v-col>
     </v-row>
-    <v-row class="mt-6" justify="center">
+    <v-row class="mt-6" justify="center" align="center">
       <v-col md="7" sm="12">
         <v-card flat>
           <v-card-title class="font-weight-bold grey--text text--darken-2" style="font-size: 1.75rem">Project Blog
@@ -76,6 +82,9 @@
           </v-card-text>
         </v-card>
       </v-col>
+<!--      <v-col md="2" sm="12">-->
+<!--        <v-img src="@/assets/undraw_blog_anyj.svg"></v-img>-->
+<!--      </v-col>-->
     </v-row>
   </v-container>
 </template>

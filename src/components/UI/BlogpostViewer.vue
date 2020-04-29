@@ -10,12 +10,17 @@
     </v-row>
     <v-row justify="center">
       <v-col class="pb-0 pt-6" md="6" sm="12">
-        <span class="font-weight-black" style="font-size: 2rem"><v-divider class="mr-2" vertical/>{{post.title}}</span>
+        <span class="font-weight-black" style="font-size: 2rem; word-break: keep-all">{{post.title}}</span>
       </v-col>
     </v-row>
     <v-row justify="center">
       <v-col class="py-0" md="6" sm="12">
-        <span class="font-weight-black grey--text" style="font-size: 1rem"><v-divider class="mr-2" vertical/> Created: {{post.date}}</span>
+        <span class="font-weight-black grey--text" style="font-size: 1rem">Created: {{post.date}}</span>
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col class="py-2" md="6" sm="12">
+        <v-divider/>
       </v-col>
     </v-row>
     <v-row justify="center">
