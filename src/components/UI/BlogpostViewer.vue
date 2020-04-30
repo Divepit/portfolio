@@ -15,7 +15,7 @@
     </v-row>
     <v-row justify="center">
       <v-col class="py-0" md="6" sm="12">
-        <span class="font-weight-black grey--text" style="font-size: 1rem">Created: {{post.date}}</span>
+        <span class="font-weight-black grey--text" style="font-size: 1rem">{{post.date}}, by Marco Trentini</span>
       </v-col>
     </v-row>
     <v-row justify="center">

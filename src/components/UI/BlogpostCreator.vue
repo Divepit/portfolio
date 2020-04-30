@@ -44,7 +44,7 @@
     </v-row>
     <v-row justify="center">
       <v-col class="pt-0" md="6" sm="12">
-        <span class="font-weight-black grey--text" style="font-size: 1rem"><v-divider class="mr-2" vertical/> Created: {{post.date}}</span>
+        <span class="font-weight-black grey--text" style="font-size: 1rem"><v-divider class="mr-2" vertical/>{{post.date}}, by Marco Trentini</span>
       </v-col>
     </v-row>
     <v-row justify="center">
@@ -75,10 +75,9 @@ export default {
   created () {
     if (this.editedPost) {
       this.post = this.editedPost
-    } else {
-      var today = new Date()
-      this.post.date = today.toDateString() + ', ' + today.getHours() + ':' + today.getMinutes()
     }
+    var today = new Date()
+    this.post.date = today.toDateString()
   },
   data () {
     return {
