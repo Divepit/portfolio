@@ -1,13 +1,13 @@
 <template>
   <div>
     <v-row justify="center">
-      <v-col md="6" sm="12">
+      <v-col md="12" lg="8" sm="12">
         <v-text-field flat hide-details label="Post Title" solo style="border: 1px lightgrey solid"
                       v-model="post.title"></v-text-field>
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col class="py-0" md="6" sm="12">
+      <v-col class="py-0" md="12" lg="8" sm="12">
         <Editor
           :outline="true"
           class="pa-0"
@@ -20,7 +20,7 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col class="pt-0" md="6" sm="12">
+      <v-col class="pt-0" md="12" lg="8" sm="12">
         <span class="grey--text mt-0">Character count: {{post.content.length}}</span>
         <v-spacer class="mb-6"/>
         <v-btn @click="savePost" class="mr-2" color="primary" outlined>Save</v-btn>
@@ -33,22 +33,22 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col md="6" sm="12">
+      <v-col md="12" lg="8" sm="12">
         <v-divider/>
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col class="pb-0" md="6" sm="12">
+      <v-col class="pb-0" md="12" lg="8" sm="12">
         <span class="font-weight-black" style="font-size: 2rem"><v-divider class="mr-2" vertical/>{{post.title ? post.title : 'Title'}}</span>
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col class="pt-0" md="6" sm="12">
+      <v-col class="pt-0" md="12" lg="8" sm="12">
         <span class="font-weight-black grey--text" style="font-size: 1rem"><v-divider class="mr-2" vertical/>{{post.date}}, by Marco Trentini</span>
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col class="grey--text text--darken-3" id="preview" md="6" sm="12">
+      <v-col class="grey--text text--darken-3" id="preview" md="12" lg="8" sm="12">
         <Editor
           :outline="true"
           class="pa-0"

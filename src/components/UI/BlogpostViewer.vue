@@ -1,7 +1,7 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-row justify="center">
-      <v-col class="pb-0" md="6" sm="12">
+      <v-col class="pb-0" md="12" lg="8" sm="12">
         <v-btn color="primary" outlined to="/blog">
           <v-icon>mdi-left</v-icon>
           All posts
@@ -9,22 +9,22 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col class="pb-0 pt-6" md="6" sm="12">
+      <v-col class="pb-0 pt-6" md="12" lg="8" sm="12">
         <span class="font-weight-black" style="font-size: 2rem; word-break: keep-all">{{post.title}}</span>
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col class="py-0" md="6" sm="12">
+      <v-col class="py-0" md="12" lg="8" sm="12">
         <span class="font-weight-black grey--text" style="font-size: 1rem">{{post.date}}, by Marco Trentini</span>
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col class="py-2" md="6" sm="12">
+      <v-col class="py-2" md="12" lg="8" sm="12">
         <v-divider/>
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col class="py-0" md="6" sm="12">
+      <v-col class="py-0" md="12" lg="8" sm="12">
         <Editor
           :outline="true"
           class="pa-0"

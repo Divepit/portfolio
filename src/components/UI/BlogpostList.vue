@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <v-container fluid>
     <v-row justify="center">
-      <v-col md="7" sm="12">
+      <v-col md="12" lg="8" sm="12">
         <span class="grey--text text--darken-2 font-weight-medium" style="font-size: 1.5rem">Recent Posts</span>
       </v-col>
     </v-row>
     <v-row :key="post.id" justify="center" v-for="post in posts">
-      <v-col md="7" sm="12">
+      <v-col md="12" lg="8" sm="12">
         <v-card flat outlined>
           <v-card-title class="font-weight-black grey--text">{{post.title}}
             <v-spacer/>
@@ -27,7 +27,7 @@
         </v-card>
       </v-col>
     </v-row>
-  </div>
+  </v-container>
 </template>
 <script>
 import { mapState } from 'vuex'
