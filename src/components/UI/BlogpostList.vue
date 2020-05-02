@@ -5,7 +5,7 @@
         <span class="grey--text text--darken-2 font-weight-medium" style="font-size: 1.5rem">Recent Posts</span>
       </v-col>
     </v-row>
-    <v-row :key="post.id" justify="center" v-for="post in posts.reverse()">
+    <v-row :key="post.id" justify="center" v-for="post in posts">
       <v-col md="12" lg="8" sm="12">
         <v-card flat outlined>
           <v-card-title class="font-weight-black grey--text">{{post.title}}
@@ -56,6 +56,7 @@ export default {
               this.posts.push(doc.data())
             }
           })
+          this.posts = this.posts.reverse()
         })
     },
     deletePost (id) {

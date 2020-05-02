@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "85bd56f2c0ca34853e06",
+    "revision": "b7e72e612b5683a4cf91",
     "url": "/css/app.04ea9482.css"
   },
   {
@@ -248,12 +248,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/undraw_code_thinking_1jeh.556a9b10.svg"
   },
   {
-    "revision": "179812ebcbf3d64875bacb9c7eb37de3",
+    "revision": "d79f53bc1bd34b9355cda47dc0e23754",
     "url": "/index.html"
   },
   {
-    "revision": "85bd56f2c0ca34853e06",
-    "url": "/js/app.4eb35ef2.js"
+    "revision": "b7e72e612b5683a4cf91",
+    "url": "/js/app.83d73873.js"
   },
   {
     "revision": "4f0fce7f9f84b7a80651",
