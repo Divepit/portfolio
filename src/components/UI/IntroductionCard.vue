@@ -101,6 +101,7 @@ export default {
             this.posts.push(doc.data())
           }
         })
+        this.posts = this.posts.reverse()
       })
   },
   data () {
