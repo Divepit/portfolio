@@ -7,7 +7,12 @@
     </v-row>
     <BlogpostCreator v-bind:editedPost="editedPost"/>
   </v-container>
-  <v-container fluid v-else>
+  <v-container v-else fluid>
+    <v-row justify="center">
+      <v-col md="12" lg="8" sm="12">
+        <v-btn @click="addingPost = true" block color="primary" elevation="0" v-if="loggedIn">New Post</v-btn>
+      </v-col>
+    </v-row>
     <BlogpostList @editPost="editPost($event)"/>
   </v-container>
 </template>
