@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row justify="center" align="center">
-      <v-col md="4" lg="4" sm="12">
+      <v-col md="8" lg="8" sm="12">
         <v-card class="lighten-1" flat>
           <v-card-title class="font-weight-black grey--text text--darken-2" style="font-size: 2rem">Hi, I'm Marco
           </v-card-title>
@@ -17,7 +17,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col md="8" lg="8" sm="12" >
+      <v-col md="4" lg="4" sm="12" >
         <v-img src="@/assets/undraw_code_thinking_1jeh.svg"></v-img>
       </v-col>
     </v-row>
