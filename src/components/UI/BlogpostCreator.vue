@@ -26,6 +26,9 @@
               mode="editor"
               nativeEmoji
               v-model="post.content"
+              :renderOptions="{katex: false}"
+              :renderConfig="renderConfig"
+              :copy="true"
             />
           </v-col>
         </v-row>
@@ -97,6 +100,42 @@ export default {
         content: '',
         public: false,
         date: ''
+      },
+      renderConfig: {
+        katex: {
+          // formula delimiters
+          delimiters: [
+            {
+              left: '$$$',
+              right: '$$$',
+              options: {
+                displayMode: true // block
+              }
+            },
+            {
+              left: '\\[',
+              right: '\\]',
+              options: {
+                displayMode: true // block
+              }
+            },
+            {
+              left: '$$',
+              right: '$$',
+              options: {
+                displayMode: false // inline
+              }
+            },
+            {
+              left: '\\(',
+              right: '\\)',
+              options: {
+                displayMode: false // inline
+              }
+            }
+          ]
+        },
+        mermaid: undefined // The native mermaid config
       },
       saved: false,
       published: false,
