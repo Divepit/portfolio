@@ -31,7 +31,7 @@
           hint="Test"
           mode="viewer"
           nativeEmoji
-          ref="editor"
+          :renderConfig="renderConfig"
           v-model="post.content"
         />
       </v-col>
@@ -54,7 +54,43 @@ export default {
   },
   data () {
     return {
-      post: {}
+      post: {},
+      renderConfig: {
+        katex: {
+          // formula delimiters
+          delimiters: [
+            {
+              left: '$$$',
+              right: '$$$',
+              options: {
+                displayMode: true // block
+              }
+            },
+            {
+              left: '\\[',
+              right: '\\]',
+              options: {
+                displayMode: true // block
+              }
+            },
+            {
+              left: '$$',
+              right: '$$',
+              options: {
+                displayMode: false // inline
+              }
+            },
+            {
+              left: '\\(',
+              right: '\\)',
+              options: {
+                displayMode: false // inline
+              }
+            }
+          ]
+        },
+        mermaid: undefined // The native mermaid config
+      }
     }
   }
 }
