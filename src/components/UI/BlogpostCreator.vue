@@ -42,7 +42,7 @@
         </v-row>
       </v-col>
       <!-- Middle -->
-      <v-col sm="12" md="6" lg="6" cols="12" class="px-6 mt-md-12 pt-md-12">
+      <v-col sm="12" md="6" lg="6" cols="12" class="px-6">
         <v-row justify="center">
           <v-col class="pb-0" md="12" lg="12" sm="12">
             <span class="font-weight-black" style="font-size: 2rem">{{post.title ? post.title : 'Title'}}</span>
