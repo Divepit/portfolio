@@ -1,7 +1,7 @@
 <template>
   <v-container v-if="addingPost" fluid>
     <v-row justify="center">
-      <v-col md="12" lg="8" sm="12">
+      <v-col md="12" lg="12" sm="12">
         <v-btn @click="addingPost = false; editedPost = false" color="primary" outlined>Back</v-btn>
       </v-col>
     </v-row>

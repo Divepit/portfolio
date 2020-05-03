@@ -8,16 +8,16 @@
     <v-row :key="post.id" justify="center" v-for="post in posts">
       <v-col md="12" lg="8" sm="12">
         <v-card flat outlined>
-          <v-card-title class="font-weight-black grey--text">{{post.title}}
+          <v-card-title class="font-weight-black grey--text" style="word-break: keep-all;">{{post.title}}
             <v-spacer/>
-            <v-card-subtitle class="pb-2 font-weight-medium grey--text text--lighten-1">Created at: {{post.date}}
-            </v-card-subtitle>
+            <v-btn elevation="0" class="text-none" color="primary" :to="'/blog/'+post.id" >Read</v-btn>
           </v-card-title>
-          <v-card-text class="grey--text text--lighten-1">{{post.content.slice(0,200)}} ...</v-card-text>
-          <v-card-actions>
-            <v-btn :to="'/blog/'+post.id" color="primary" elevation="0">Read</v-btn>
-            <v-btn @click="$emit('editPost', post)" color="primary" outlined v-if="loggedIn">Edit</v-btn>
-            <v-btn color="success" elevation="0" outlined rounded v-if="post.public && loggedIn">
+          <v-card-subtitle class="pb-2 font-weight-medium grey--text text--lighten-1">Created at: {{post.date}}
+          </v-card-subtitle>
+          <v-card-text class="grey--text">{{post.content.slice(0,250)}}...</v-card-text>
+          <v-card-actions v-if="loggedIn">
+            <v-btn @click="$emit('editPost', post)" color="primary" outlined >Edit</v-btn>
+            <v-btn color="success" elevation="0" outlined rounded v-if="post.public">
               <v-icon>mdi-check</v-icon>
               Public
             </v-btn>

@@ -19,6 +19,7 @@ export default {
 <style>
   #app {
     font-family: "Open Sans";
+    overflow: hidden;
   }
 
   .muli {
