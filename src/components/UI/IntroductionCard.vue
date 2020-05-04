@@ -41,7 +41,7 @@
           <v-card-text style="font-size: 1.5rem">
 <!--            <span class="grey&#45;&#45;text text&#45;&#45;darken-2 font-weight-medium" style="font-size: 1.5rem">Recent Posts</span>-->
             <v-card :key="post.id" :to="'/blog/'+post.id" class="mt-2" v-for="post in posts" flat outlined>
-              <v-card-title class="font-weight-light grey--text body-1">{{post.date}}<span class="hidden-sm-and-down"> - </span><br class="hidden-md-and-up">{{post.title}}
+              <v-card-title class="font-weight-light grey--text body-1">{{post.date}} <span class="hidden-sm-and-down mx-2"> – </span><br class="hidden-md-and-up"> {{post.title}}
               </v-card-title>
             </v-card>
           </v-card-text>
