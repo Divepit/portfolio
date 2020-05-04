@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row justify="center" class="mb-6">
-      <v-col md="12" lg="8" sm="12">
+      <v-col md="8" lg="8" sm="12">
         <span class="grey--text text--darken-2 font-weight-bold" style="font-size: 1.75rem">Recent Posts</span>
       </v-col>
     </v-row>
