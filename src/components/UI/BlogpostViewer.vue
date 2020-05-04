@@ -10,7 +10,7 @@
     </v-row>
     <v-row justify="center">
       <v-col class="pb-0 pt-6" md="12" lg="8" sm="12">
-        <span class="font-weight-black" style="font-size: 2rem; word-break: keep-all">{{post.title}}</span>
+        <span class="font-weight-black grey--text text--darken-2" style="font-size: 2.5rem; word-break: keep-all">{{post.title}}</span>
       </v-col>
     </v-row>
     <v-row justify="center">

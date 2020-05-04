@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f113200dd6c5f9786153",
+    "revision": "53c105d2045f4d97ac7e",
     "url": "/css/app.1fdfd62f.css"
   },
   {
@@ -244,12 +244,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fonts/KaTeX_Typewriter-Regular.6cc31ea5.6cc31ea5.woff2"
   },
   {
-    "revision": "356d0f210e5b0b7af50854daa05d8b81",
+    "revision": "1b93db18d1bf10510451702fdafdbfcd",
     "url": "/index.html"
   },
   {
-    "revision": "f113200dd6c5f9786153",
-    "url": "/js/app.0b2e9eaa.js"
+    "revision": "53c105d2045f4d97ac7e",
+    "url": "/js/app.deb5ef91.js"
   },
   {
     "revision": "4f0fce7f9f84b7a80651",
