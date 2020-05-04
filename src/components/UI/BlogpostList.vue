@@ -1,8 +1,8 @@
 <template>
   <v-container fluid>
-    <v-row justify="center">
+    <v-row justify="center" class="mb-6">
       <v-col md="12" lg="8" sm="12">
-        <span class="grey--text text--darken-2 font-weight-medium" style="font-size: 1.5rem">Recent Posts</span>
+        <span class="grey--text text--darken-2 font-weight-bold" style="font-size: 1.75rem">Recent Posts</span>
       </v-col>
     </v-row>
     <v-row :key="post.id" justify="center" v-for="post in posts">
@@ -10,7 +10,7 @@
         <v-card flat outlined>
           <v-card-title class="font-weight-black grey--text" style="word-break: keep-all;">{{post.title}}
             <v-spacer/>
-            <v-btn elevation="0" class="text-none" color="primary" :to="'/blog/'+post.id" >Read</v-btn>
+            <v-btn elevation="0" class="text-none" color="primary" :to="'/blog/'+post.id" outlined>Read</v-btn>
           </v-card-title>
           <v-card-subtitle class="pb-2 font-weight-medium grey--text text--lighten-1">Created at: {{post.date}}
           </v-card-subtitle>
