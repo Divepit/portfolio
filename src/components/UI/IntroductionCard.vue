@@ -99,7 +99,7 @@ export default {
           }
         })
         this.posts.sort((b, a) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1)
-        this.posts.slice(1, 2)
+        this.posts.pop(this.posts.length - 3)
       })
   },
   data () {
