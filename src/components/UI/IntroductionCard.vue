@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row justify="center" align="center" class="mt-12 pt-12 pb-12 pt-md-0 pb-md-0 mb-sm-12 mb-6">
       <v-col md="8" lg="8" sm="12">
-        <v-card class="lighten-1" flat>
+        <v-card class="lighten-1 transparent" flat>
           <v-card-title class="font-weight-black grey--text text--darken-2 hidden-md-and-up" style="font-size: 2.9rem; word-break: keep-all">Hi, I'm Marco</v-card-title>
           <v-card-title class="font-weight-black grey--text text--darken-2 hidden-sm-and-down" style="font-size: 3.5rem; word-break: keep-all">Hi, I'm Marco</v-card-title>
           <v-card-text class="font-weight-regular text--lighten-4 mt-6" style="font-size: 1.25rem">
@@ -28,7 +28,7 @@
     </v-row>
     <v-row class="mt-6 mb-6" justify="center" align="center">
       <v-col md="12" lg="8" sm="12">
-        <v-card flat>
+        <v-card flat class="transparent">
           <v-card-title class="font-weight-bold grey--text text--darken-2" style="font-size: 1.75rem">Project Blog
           </v-card-title>
           <v-card-text class="font-weight-regular text--lighten-4" style="font-size: 1.25rem">
@@ -61,7 +61,7 @@
       <!--        <v-img src="@/assets/undraw_choice_9385.svg"></v-img>-->
       <!--      </v-col>-->
       <v-col md="12" lg="8" sm="12">
-        <v-card flat>
+        <v-card class="transparent" flat>
           <v-card-title class="font-weight-bold grey--text text--darken-2" style="font-size: 1.75rem">What am I working
             on
           </v-card-title>
