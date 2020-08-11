@@ -13,7 +13,10 @@ import CustomFooter from './components/UI/CustomFooter'
 
 export default {
   name: 'App',
-  components: { CustomFooter, Toolbar }
+  components: { CustomFooter, Toolbar },
+  created () {
+    this.$vuetify.theme.dark = false
+  }
 }
 </script>
 <style>

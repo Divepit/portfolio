@@ -8,10 +8,10 @@
                           v-model="post.title"></v-text-field>
           </v-col>
             <v-col class="pt-2" md="12" lg="5" sm="12" cols="12" align-self="center">
-              <v-btn @click="savePost" class="mr-2" color="primary" outlined>Save</v-btn>
-              <v-btn @click="publishPost" class="mr-3" color="success" v-if="!post.public">Publish</v-btn>
-              <v-btn @click="unpublishPost" class="mr-3" color="error" v-if="post.public">Unpublish</v-btn>
-              <v-btn color="success" elevation="0" outlined rounded v-if="post.public">
+              <v-btn @click="savePost" class="mr-2" color="primary" small outlined>Save</v-btn>
+              <v-btn @click="publishPost" class="mr-3" color="success" small v-if="!post.public">Publish</v-btn>
+              <v-btn @click="unpublishPost" class="mr-2" color="error" small v-if="post.public">Unpublish</v-btn>
+              <v-btn color="success" elevation="0" outlined small rounded v-if="post.public">
                 <v-icon>mdi-check</v-icon>
                 Published
               </v-btn>
@@ -48,7 +48,7 @@
       <v-col sm="12" md="6" lg="6" cols="12" class="px-6">
         <v-row justify="center">
           <v-col class="pb-0" md="12" lg="12" sm="12">
-            <span class="font-weight-black" style="font-size: 2rem">{{post.title ? post.title : 'Title'}}</span>
+            <span class="font-weight-black grey--text text--darken-2" style="font-size: 2.5rem; word-break: keep-all">{{post.title ? post.title : 'Title'}}</span>
           </v-col>
         </v-row>
         <v-row justify="center">
@@ -59,7 +59,6 @@
         <v-row justify="center">
           <Editor
             :outline="true"
-            class="pa-0"
             mode="viewer"
             nativeEmoji
             v-model="post.content"

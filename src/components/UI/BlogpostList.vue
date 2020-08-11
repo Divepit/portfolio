@@ -56,7 +56,7 @@ export default {
               this.posts.push(doc.data())
             }
           })
-          this.posts = this.posts.reverse()
+          this.posts.sort((a, b) => (Date.parse(b.date) > Date.parse(a.date)) ? 1 : -1)
         })
     },
     deletePost (id) {

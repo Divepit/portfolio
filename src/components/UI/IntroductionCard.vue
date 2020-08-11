@@ -71,7 +71,7 @@
             allows them to focus on their studies, making the time spent studying more efficient.</span>
           </v-card-text>
           <v-card-text style="font-size: 1.5rem">
-            <v-card class="pb-2" href="https://napoly.ch" outlined color="napoly">
+            <v-card class="pb-2" href="https://napoly.ch" target="_blank" outlined color="napoly">
               <v-card-title class="font-weight-regular white--text muli" style="font-size: 1.5rem">napoly.ch
 
               </v-card-title>
@@ -98,7 +98,8 @@ export default {
             this.posts.push(doc.data())
           }
         })
-        this.posts = this.posts.reverse()
+        this.posts.sort((b, a) => (Date.parse(a.date) > Date.parse(b.date)) ? 1 : -1)
+        this.posts.slice(1, 2)
       })
   },
   data () {
