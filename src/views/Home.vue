@@ -20,7 +20,6 @@
     >
     </vue-particles>
     <IntroductionCard/>
-
   </div>
 </template>
 

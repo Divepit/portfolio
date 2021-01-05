@@ -5,11 +5,10 @@
         <v-card-title class="pl-0 muli primary--text">Sign in</v-card-title>
       </v-toolbar>
       <v-card-text>
-        <v-text-field @keydown.enter="signin()" flat label="E-Mail" outlined solo type="email" color="primary"
+        <v-text-field @keydown.enter="signin()" :error="message" class="mb-4" hide-details flat label="E-Mail" outlined solo type="email" color="primary"
                       v-model="email"></v-text-field>
-        <v-text-field @keydown.enter="signin()" flat label="Password" outlined solo type="password"
+        <v-text-field @keydown.enter="signin()" :error-messages="message" flat label="Password" outlined solo type="password"
                       v-model="password"></v-text-field>
-        <v-alert outlined dense color="error">Hello</v-alert>
       </v-card-text>
     </v-card>
   </v-container>
@@ -45,7 +44,7 @@ export default {
             }
           })
           .catch(error => {
-            this.message = error
+            this.message = error.message
           })
       }
     }

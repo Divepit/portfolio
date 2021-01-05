@@ -14,7 +14,7 @@
           </v-card-title>
           <v-card-subtitle class="pb-2 font-weight-medium grey--text text--lighten-1">Created at: {{post.date}}
           </v-card-subtitle>
-          <v-card-text class="grey--text">{{post.content.slice(0,250)}}...</v-card-text>
+          <v-card-text class="grey--text">{{post.introduction}}</v-card-text>
           <v-card-actions v-if="loggedIn">
             <v-btn @click="$emit('editPost', post)" color="primary" outlined >Edit</v-btn>
             <v-btn color="success" elevation="0" outlined rounded v-if="post.public">

@@ -1,9 +1,9 @@
 <template>
   <v-app id="app">
     <Toolbar/>
-    <v-content class="pt-0">
+    <v-main class="pt-0">
       <router-view/>
-    </v-content>
+    </v-main>
     <CustomFooter/>
   </v-app>
 </template>

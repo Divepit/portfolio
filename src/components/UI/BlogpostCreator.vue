@@ -16,6 +16,9 @@
                 Published
               </v-btn>
             </v-col>
+          <v-col md="12" lg="12" sm="12" cols="12">
+            <v-textarea class="mb-8" flat hide-details label="Post Introduction" solo style="border: 1px lightgrey solid" v-model="post.introduction" height="100"></v-textarea>
+          </v-col>
         </v-row>
         <v-row justify="center">
           <v-col class="py-0" md="12" lg="12" sm="12" cols="12">
@@ -33,7 +36,7 @@
           </v-col>
         </v-row>
         <v-row justify="center">
-          <v-col class="pt-2" md="12" lg="12" sm="12">
+          <v-col class="pt-6" md="12" lg="12" sm="12">
             <v-btn @click="savePost" class="mr-2" color="primary" outlined>Save</v-btn>
             <v-btn @click="publishPost" class="mr-3" color="success" v-if="!post.public">Publish</v-btn>
             <v-btn @click="unpublishPost" class="mr-3" color="error" v-if="post.public">Unpublish</v-btn>
@@ -54,6 +57,11 @@
         <v-row justify="center">
           <v-col class="pt-0" md="12" lg="12" sm="12">
             <span class="font-weight-black grey--text" style="font-size: 1rem">{{post.date}}, by Marco Trentini</span>
+          </v-col>
+        </v-row>
+        <v-row justify="center">
+          <v-col class="pt-0" md="12" lg="12" sm="12">
+            <span style="font-size: 1rem">{{post.introduction ? post.introduction : 'Introduction'}}</span>
           </v-col>
         </v-row>
         <v-row justify="center">
@@ -96,6 +104,7 @@ export default {
       post: {
         id: null,
         title: '',
+        introduction: '',
         content: '',
         public: false,
         date: ''
