@@ -5,7 +5,7 @@
         <span class="grey--text text--darken-2 font-weight-bold" style="font-size: 1.75rem">Recent Posts</span>
       </v-col>
     </v-row>
-    <v-row :key="post.id" justify="center" v-for="post in posts">
+    <v-row :key="post.id" justify="center" v-for="post in postsOnPage">
       <v-col md="12" lg="8" sm="12">
         <v-card flat outlined>
           <v-card-title class="font-weight-black grey--text" style="word-break: keep-all;">{{post.title}}
@@ -27,6 +27,26 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-row class="mt-4" v-if="itemsPerPage<posts.length">
+      <v-col align-self="center">
+        <v-pagination
+          v-model="page"
+          :length="Math.ceil(posts.length/this.itemsPerPage)"
+          prev-icon="mdi-menu-left"
+          next-icon="mdi-menu-right"
+        ></v-pagination>
+      </v-col>
+    </v-row>
+    <v-row class="mt-6">
+      <v-spacer/>
+      <v-col md="1" lg="1" sm="1" cols="5" align-self="center" class="pr-0 font-weight-light grey--text">
+        Items per page:
+      </v-col>
+      <v-col md="1" lg="1" sm="1" class="pl-0 pr-12">
+        <v-select dense solo :items="[4,8,20,100]" v-model="itemsPerPage" hide-details ></v-select>
+      </v-col>
+      <v-spacer/>
+    </v-row>
   </v-container>
 </template>
 <script>
@@ -39,11 +59,20 @@ export default {
     this.getBlogposts()
   },
   computed: {
-    ...mapState(['loggedIn'])
+    ...mapState(['loggedIn']),
+    postsOnPage: function () {
+      if (this.itemsPerPage < this.posts.length) {
+        return this.posts.slice((this.page - 1) * this.itemsPerPage, ((this.page - 1) * this.itemsPerPage) + this.itemsPerPage)
+      } else {
+        return this.posts
+      }
+    }
   },
   data () {
     return {
-      posts: []
+      posts: [],
+      page: 1,
+      itemsPerPage: 4
     }
   },
   methods: {
