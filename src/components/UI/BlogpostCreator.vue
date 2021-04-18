@@ -13,7 +13,7 @@
               <v-btn @click="unpublishPost" class="mr-2" color="error" small v-if="post.public">Unpublish</v-btn>
               <v-btn color="success" elevation="0" outlined small rounded v-if="post.public">
                 <v-icon>mdi-check</v-icon>
-                Published
+                Public
               </v-btn>
             </v-col>
           <v-col md="12" lg="12" sm="12" cols="12">
@@ -42,7 +42,7 @@
             <v-btn @click="unpublishPost" class="mr-3" color="error" v-if="post.public">Unpublish</v-btn>
             <v-btn color="success" elevation="0" outlined rounded v-if="post.public">
               <v-icon>mdi-check</v-icon>
-              Published
+              Public
             </v-btn>
           </v-col>
         </v-row>
