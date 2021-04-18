@@ -60,23 +60,53 @@
       <!--      <v-col md="2" sm="12">-->
       <!--        <v-img src="@/assets/undraw_choice_9385.svg"></v-img>-->
       <!--      </v-col>-->
-      <v-col md="12" lg="8" sm="12">
+      <v-col md="6" lg="8" sm="6">
         <v-card class="transparent" flat>
           <v-card-title class="font-weight-bold grey--text text--darken-2" style="font-size: 1.75rem">What am I working
             on
           </v-card-title>
-          <v-card-text class="font-weight-regular text--lighten-4" style="font-size: 1.25rem">
-            <span style="font-size: 1.25rem;" class="grey--text">Currently I am mainly working on a student learning platform called napoly.</span> <br><br>
-            The goal is to make all relevant learning documents easily available to as many students as possible. <span class="hidden-sm-and-down">This
-            allows them to focus on their studies, making the time spent studying more efficient.</span>
+<!--          <v-card-text class="font-weight-regular text&#45;&#45;lighten-4" style="font-size: 1.25rem">-->
+<!--            <span style="font-size: 1.25rem;" class="grey&#45;&#45;text">Currently I am mainly working on a student learning platform called napoly.</span> <br><br>-->
+<!--            The goal is to make all relevant learning documents easily available to as many students as possible. <span class="hidden-sm-and-down">This-->
+<!--            allows them to focus on their studies, making the time spent studying more efficient.</span>-->
+<!--          </v-card-text>-->
+          <v-card-text class="font-weight-regular text&#45;&#45;lighten-4" style="font-size: 1.25rem">
+            <span style="font-size: 1.25rem;" class="grey--text">Past and current projects</span>
           </v-card-text>
           <v-card-text style="font-size: 1.5rem">
             <v-card class="pb-2" href="https://napoly.ch" target="_blank" outlined color="napoly">
               <v-card-title class="font-weight-regular white--text muli" style="font-size: 1.5rem">napoly.ch
-
               </v-card-title>
               <v-card-subtitle class="pb-2 font-weight-light white--text muli">
                 Student Document Repository
+              </v-card-subtitle>
+            </v-card>
+            <v-card class="pb-2 mt-2" href="https://dyana.ethz.ch" target="_blank" outlined color="#22213c">
+              <v-card-title class="font-weight-regular white--text muli" style="font-size: 1.5rem">Project Dyana
+              </v-card-title>
+              <v-card-subtitle class="pb-2 font-weight-light white--text muli">
+                Dynamic Animatronic Quadrupedal
+              </v-card-subtitle>
+            </v-card>
+            <v-card class="pb-2 mt-2" href="https://www.divestore.ch/shop/" target="_blank" outlined color="#439edd">
+              <v-card-title class="font-weight-regular white--text muli" style="font-size: 1.5rem">Divestore.ch
+              </v-card-title>
+              <v-card-subtitle class="pb-2 font-weight-light white--text muli">
+                Onlineshop of Tauchsport Uster AG
+              </v-card-subtitle>
+            </v-card>
+            <v-card class="pb-2 mt-2" href="https://elsa-switzerland.org" target="_blank" outlined color="">
+              <v-card-title class="font-weight-regular blue--text text--darken-4 muli" style="font-size: 1.5rem">ELSA Switzerland
+              </v-card-title>
+              <v-card-subtitle class="pb-2 font-weight-light blue--text text--darken-4 muli">
+                European Law Students Association - Switzerland
+              </v-card-subtitle>
+            </v-card>
+            <v-card class="pb-2 mt-2" href="https://elsazuerich.ch" target="_blank" outlined color="">
+              <v-card-title class="font-weight-regular blue--text text--darken-4 muli" style="font-size: 1.5rem">ELSA Zurich
+              </v-card-title>
+              <v-card-subtitle class="pb-2 font-weight-light blue--text text--darken-4 muli">
+                European Law Students Association - Zurich
               </v-card-subtitle>
             </v-card>
           </v-card-text>
