@@ -40,9 +40,12 @@
           </v-card-text>
           <v-card-text style="font-size: 1.5rem">
 <!--            <span class="grey&#45;&#45;text text&#45;&#45;darken-2 font-weight-medium" style="font-size: 1.5rem">Recent Posts</span>-->
-            <v-card :key="post.id" :to="'/blog/'+post.id" class="mt-2" v-for="post in posts" flat outlined>
+            <v-card :key="post.id" :to="'/blog/'+post.id" class="mt-2" v-for="post in posts.slice(0,4)" flat outlined>
               <v-card-title class="font-weight-light grey--text body-1">{{post.date}} <span class="hidden-sm-and-down mx-2"> – </span><br class="hidden-md-and-up"> {{post.title}}
               </v-card-title>
+            </v-card>
+            <v-card class="mt-2" flat to="blog" outlined  >
+              <v-card-title class="font-weight-light grey--text body-1">View more ...</v-card-title>
             </v-card>
           </v-card-text>
         </v-card>
@@ -74,38 +77,38 @@
             <span style="font-size: 1.25rem;" class="grey--text">Past and current projects</span>
           </v-card-text>
           <v-card-text style="font-size: 1.5rem">
-            <v-card class="pb-2" href="https://napoly.ch" target="_blank" outlined color="napoly">
+            <v-card class="pb-2" href="https://napoly.ch" target="_blank" outlined color="primary">
               <v-card-title class="font-weight-regular white--text muli" style="font-size: 1.5rem">napoly.ch
               </v-card-title>
               <v-card-subtitle class="pb-2 font-weight-light white--text muli">
                 Student Document Repository
               </v-card-subtitle>
             </v-card>
-            <v-card class="pb-2 mt-2" href="https://dyana.ethz.ch" target="_blank" outlined color="#22213c">
+            <v-card class="pb-2 mt-2" href="https://dyana.ethz.ch" target="_blank" outlined color="primary">
               <v-card-title class="font-weight-regular white--text muli" style="font-size: 1.5rem">Project Dyana
               </v-card-title>
               <v-card-subtitle class="pb-2 font-weight-light white--text muli">
                 Dynamic Animatronic Quadrupedal
               </v-card-subtitle>
             </v-card>
-            <v-card class="pb-2 mt-2" href="https://www.divestore.ch/shop/" target="_blank" outlined color="#439edd">
+            <v-card class="pb-2 mt-2" href="https://www.divestore.ch/shop/" target="_blank" outlined color="primary">
               <v-card-title class="font-weight-regular white--text muli" style="font-size: 1.5rem">Divestore.ch
               </v-card-title>
               <v-card-subtitle class="pb-2 font-weight-light white--text muli">
                 Onlineshop of Tauchsport Uster AG
               </v-card-subtitle>
             </v-card>
-            <v-card class="pb-2 mt-2" href="https://elsa-switzerland.org" target="_blank" outlined color="">
-              <v-card-title class="font-weight-regular blue--text text--darken-4 muli" style="font-size: 1.5rem">ELSA Switzerland
+            <v-card class="pb-2 mt-2" href="https://elsa-switzerland.org" target="_blank" outlined color="primary">
+              <v-card-title class="font-weight-regular white--text muli" style="font-size: 1.5rem">ELSA Switzerland
               </v-card-title>
-              <v-card-subtitle class="pb-2 font-weight-light blue--text text--darken-4 muli">
+              <v-card-subtitle class="pb-2 font-weight-light white--text muli">
                 European Law Students Association - Switzerland
               </v-card-subtitle>
             </v-card>
-            <v-card class="pb-2 mt-2" href="https://elsazuerich.ch" target="_blank" outlined color="">
-              <v-card-title class="font-weight-regular blue--text text--darken-4 muli" style="font-size: 1.5rem">ELSA Zurich
+            <v-card class="pb-2 mt-2" href="https://elsazuerich.ch" target="_blank" outlined color="primary">
+              <v-card-title class="font-weight-regular white--text muli" style="font-size: 1.5rem">ELSA Zurich
               </v-card-title>
-              <v-card-subtitle class="pb-2 font-weight-light blue--text text--darken-4 muli">
+              <v-card-subtitle class="pb-2 font-weight-light white--text muli">
                 European Law Students Association - Zurich
               </v-card-subtitle>
             </v-card>
