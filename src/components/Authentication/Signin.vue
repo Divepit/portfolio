@@ -40,7 +40,6 @@ export default {
               this.$store.state.loggedIn = true
               localStorage.loggedIn = true
               this.$router.replace('/')
-            } else {
             }
           })
           .catch(error => {
