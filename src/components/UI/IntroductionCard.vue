@@ -98,20 +98,6 @@
                 Onlineshop of Tauchsport Uster AG
               </v-card-subtitle>
             </v-card>
-            <v-card class="pb-2 mt-2" href="https://elsa-switzerland.org" target="_blank" outlined color="primary">
-              <v-card-title class="font-weight-regular white--text muli" style="font-size: 1.5rem">ELSA Switzerland
-              </v-card-title>
-              <v-card-subtitle class="pb-2 font-weight-light white--text muli">
-                European Law Students Association - Switzerland
-              </v-card-subtitle>
-            </v-card>
-            <v-card class="pb-2 mt-2" href="https://elsazuerich.ch" target="_blank" outlined color="primary">
-              <v-card-title class="font-weight-regular white--text muli" style="font-size: 1.5rem">ELSA Zurich
-              </v-card-title>
-              <v-card-subtitle class="pb-2 font-weight-light white--text muli">
-                European Law Students Association - Zurich
-              </v-card-subtitle>
-            </v-card>
           </v-card-text>
         </v-card>
       </v-col>
